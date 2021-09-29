@@ -10,11 +10,33 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("App did enter background")
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("App did finish launching with options")
         return true
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("App will terminate")
+    }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("App will finish launching with options")
+        return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print("App did become active")
+    }
+    func applicationWillResignActive(_ application: UIApplication) {
+        print("App will resign active")
+    }
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("App will enter foreground")
     }
 
     // MARK: UISceneSession Lifecycle
